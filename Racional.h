@@ -18,15 +18,21 @@ class Racional : public Real{
 		void setDenominador(double);
 		double getNumerador();
 		void setNumerador(double);
-		void tostring(string&, double);
+		string tostring();
 
 		string operator+(Real& real){
 			Racional* p=static_cast<Racional*> (&real);
-			double total;
+			string total;
+			double num=0, den=0;
 			if (denominador== p->getDenominador()){
-				total=numerador+p->getNumerador();
-				tostring();
+				num=numerador+p->getNumerador();
+				total+=num;
+				total+=" / ";
+				total+=denominador;
 
+				return total;
+			}else{
+				
 			}
 		}
 

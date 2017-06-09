@@ -25,8 +25,8 @@ class Radical : public Real{
 		void setRadicando(double);
 
 		string operator+(Real& real){
-			Radical* rad = dynamic_cast<Radical*>(real);
-			
+			Radical* rad = static_cast<Radical*>(&real);
+
 		}
 		string operator-(Real&){
 
