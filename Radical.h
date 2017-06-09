@@ -25,11 +25,22 @@ class Radical : public Real{
 		void setRadicando(double);
 
 		string operator+(Real& real){
-			Radical* rad = dynamic_cast<Radical*>(real);
+			Radical* rad = dynamic_cast<Radical*>(&real);
+			double suma = 0;
+			if (radicando == rad->getRadicando() && indice == rad->getIndice())
+			{
+				suma = coeficiente + rad->getCoeficiente();
+			}
 			
-		}
-		string operator-(Real&){
 
+		}
+		string operator-(Real& real){
+			Radical* rad = dynamic_cast<Radical*>(&real);
+			double resta = 0;
+			if (radicando == rad->getRadicando() && indice == rad->getIndice())
+			{
+				resta = coeficiente - rad->getCoeficiente();
+			}
 		}
 		string operator*(Real&){
 
