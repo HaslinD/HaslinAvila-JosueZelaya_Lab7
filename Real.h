@@ -9,10 +9,15 @@ using namespace std;
 class Real{
 	public:
 		Real();
-		virtual string operator+(Real&) = 0;
-		virtual string operator-(Real&) = 0;
-		virtual string operator*(Real&) = 0;
-		virtual string operator/(Real&) = 0;
+		virtual string operator+(Racional&) = 0;
+		virtual string operator-(Racional&) = 0;
+		virtual string operator*(Racional&) = 0;
+		virtual string operator/(Racional&) = 0;
+
+    virtual string operator+(Radical&) = 0;
+		virtual string operator-(Radical&) = 0;
+		virtual string operator*(Radical&) = 0;
+		virtual string operator/(Radical&) = 0;
 };
 
 
