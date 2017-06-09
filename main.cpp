@@ -24,7 +24,7 @@ int main(){
 	while (!salir){
         switch(menu()){
            	case 1:{
-					           
+           		
                	break;}
 
 	       	case 2:{
@@ -36,7 +36,6 @@ int main(){
 	           	break;
 	    }
 	}
-
 	return 0;
 }
 
@@ -45,8 +44,8 @@ int menu(){
     bool valido = true;
     do{
         cout << "-----MENU------" << endl
-             << "1.- Ejercicio 1" << endl
-             << "2.- Ejercicio 2" << endl
+             << "1.- Crear Numeros" << endl
+             << "2.- Usar" << endl
              << "3.- Salir" << endl; 
 
         cout << " Ingrese una opción: ";

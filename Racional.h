@@ -21,7 +21,7 @@ class Racional {
 		virtual int suma();
 		virtual int resta();
 		virtual int multiplicacion();
-		virtual int division();
+		virtual int divsion();
 };
 
 #endif
