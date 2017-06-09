@@ -7,7 +7,7 @@ using namespace std;
 
 #ifndef RADICAL_H
 #define RADICAL_H
-class Radical{
+class Radical : public Real{
 	protected:
 		double coeficiente;
 		double indice;
@@ -24,16 +24,16 @@ class Radical{
 		double getRadicando();
 		void setRadicando(double);
 
-		virtual int operator+(Real&){
+		int operator+(Real& real){
+			Radical* rad = dynamic_cast<Real*>(real);
+		}
+		int operator-(Real&){
 
 		}
-		virtual int operator-(Real&){
+		int operator*(Real&){
 
 		}
-		virtual int operator*(Real&){
-
-		}
-		virtual int operator/(Real&){
+		int operator/(Real&){
 
 		}
 
