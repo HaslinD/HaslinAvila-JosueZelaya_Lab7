@@ -37,14 +37,17 @@ class Radical : public Radical{
 				total += " ^ "+"1"+"/"+indice;
 				total += " )";
 
+				return total;
+
 			} else if (radicando != rad->getRadicando() || indice != rad->getIndice()) {
 				total += coeficiente;
 				total += "( "+radicando;
 				total += " ^ "+"1"+"/"+indice;
 				total += " )";
+				return total;
 			}
-			
-			return total;
+
+
 		}
 		string operator-(Real& real){
 			Radical* p=static_cast<Radical*> (&real);
@@ -57,13 +60,17 @@ class Radical : public Radical{
 				total += "( "+radicando
 				total += " ^ "+"1"+"/"+indice;
 				total += " )";
+
+				return total;
 			} else if (radicando != rad->getRadicando() || indice != rad->getIndice()) {
 				total += suma;
 				total += "( "+radicando
 				total += " ^ "+"1"+"/"+indice;
 				total += " )";
+
+				return total;
 			}
-			return total;
+
 		}
 		string operator*(Real& real){
 			Radical* p = static_cast<Radical*> (&real);
