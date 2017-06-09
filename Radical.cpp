@@ -28,3 +28,18 @@ void Radical::setRadicando(int radicando){
 int Radical::getRadicando(){
    return radicando;
 }
+
+int Radical::suma(){
+	return -1;
+}
+
+int Radical::resta(){
+	return -1;
+}
+
+int Radical::division(){
+	return -1;
+}
+int Radical::multiplicacion(){
+	return -1;
+}
