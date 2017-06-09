@@ -7,10 +7,10 @@ using namespace std;
 class Real{
 	public:
 		Real();
-		virtual int suma() = 0;
-		virtual int resta() = 0;
-		virtual int multiplicacion() = 0;
-		virtual int division() = 0;
+		virtual int operator+(Real*) = 0;
+		virtual int operator-(Real*) = 0;
+		virtual int operator*(Real*) = 0;
+		virtual int operator/(Real*) = 0;
 };
 
 

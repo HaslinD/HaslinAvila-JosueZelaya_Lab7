@@ -18,10 +18,19 @@ class Racional {
 		int getNumerador();
 		void setNumerador(int);
 
-		virtual int suma();
-		virtual int resta();
-		virtual int multiplicacion();
-		virtual int division();
+		int operator+(Real*){
+
+		}
+		int operator-(Real*){
+
+		}
+		int operator*(Real*){
+
+		}
+		int operator/(Real*){
+			
+		}
+
 };
 
 #endif

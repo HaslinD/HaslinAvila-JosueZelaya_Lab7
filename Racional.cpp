@@ -26,19 +26,3 @@ int Racional :: getNumerador() {
 void Racional :: setNumerador(int nnumerador) {
 	numerador = nnumerador;
 }
-
-int Racional :: suma() {
-	
-}
-
-int Racional :: resta() { 
-	
-}
-
-int Racional :: multiplicacion() {
-	
-}
-
-int Racional :: division() {
-	
-}
