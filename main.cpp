@@ -9,8 +9,11 @@
 
 using namespace std;
 
+<<<<<<< HEAD
 int menu();
 
+=======
+>>>>>>> 6c1c862b9cdbbae001bd1c35b71417c5ea73c2ac
 int main(){
 	int* Banco;
 	for (int i = 0; i < 9; ++i)

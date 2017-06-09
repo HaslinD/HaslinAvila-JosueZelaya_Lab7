@@ -7,15 +7,15 @@ using namespace std;
 
 class Racional {
 	private:
-		int denominador;
-		int numerador;
+		double denominador;
+		double numerador;
 
 	public:
 		Racional();
-		Racional(int, int);
-		int getDenominador();
+		Racional(double, double);
+		double getDenominador();
 		void setDenominador(int);
-		int getNumerador();
+		double getNumerador();
 		void setNumerador(int);
 
 		int operator+(Real& real){
@@ -28,9 +28,11 @@ class Racional {
 		int operator-(Real&){
 
 		}
+
 		int operator*(Real&){
 
 		}
+
 		int operator/(Real&){
 
 		}

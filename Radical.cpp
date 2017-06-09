@@ -1,7 +1,7 @@
 #include "Radical.h"
 #include "Real.h"
 
-Radical::Radical(int coeficiente,int indice,int radicando){
+Radical::Radical(double coeficiente,double indice,double radicando){
 	this->coeficiente=coeficiente;
 	this->indice=indice;
 	this->radicando=radicando;
@@ -10,21 +10,21 @@ Radical::Radical(){
 
 }
 
-void Radical::setCoeficiente(int coeficiente){
+void Radical::setCoeficiente(double coeficiente){
    this-> coeficiente=coeficiente;
 }
-int Radical::getCoeficiente(){
+double Radical::getCoeficiente(){
    return coeficiente;
 }
-void Radical::setIndice(int indice){
+void Radical::setIndice(double indice){
    this-> indice=indice;
 }
-int Radical::getIndice(){
+double Radical::getIndice(){
    return indice;
 }
-void Radical::setRadicando(int radicando){
+void Radical::setRadicando(double radicando){
    this-> radicando=radicando;
 }
-int Radical::getRadicando(){
+double Radical::getRadicando(){
    return radicando;
 }
