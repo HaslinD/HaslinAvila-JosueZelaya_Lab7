@@ -1,4 +1,5 @@
 #include "Real.h"
+#include <string>
 
 #ifndef RACIONAL_H
 #define RACIONAL_H
@@ -19,7 +20,7 @@ class Racional : public Real{
 		void setNumerador(double);
 		void tostring(string&, double);
 
-		int operator+(Real& real){
+		string operator+(Real& real){
 			Racional* p=static_cast<Racional*> (&real);
 			double total;
 			if (denominador== p->getDenominador()){
@@ -29,15 +30,15 @@ class Racional : public Real{
 			}
 		}
 
-		int operator-(Real& real){
+		string operator-(Real& real){
 
 		}
 
-		int operator*(Real& real){
+		string operator*(Real& real){
 
 		}
 
-		int operator/(Real& real){
+		string operator/(Real& real){
 
 		}
 

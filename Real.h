@@ -2,6 +2,8 @@
 #ifndef REAL_H
 #define REAL_H
 
+#include <string>
+
 using namespace std;
 
 class Real{
