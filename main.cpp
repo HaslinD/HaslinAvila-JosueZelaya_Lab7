@@ -25,6 +25,8 @@ int main(){
 	while (!salir){
         switch(menu()){
            	case 1:{
+                
+
 
                	break;}
 

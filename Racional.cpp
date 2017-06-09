@@ -1,4 +1,6 @@
 #include "Racional.h"
+#include <sstream>
+#include <string>
 
 using namespace std;
 
@@ -27,9 +29,9 @@ void Racional :: setNumerador(double nnumerador) {
 	numerador = nnumerador;
 }
 
-void Racional::tostring(string& out, double value){
-    ostringstream ss;
-    ss << value;
-    out = ss.str();
+string Racional::tostring(){
+    stringstream ss;
+    ss << numerador<< " / "<<denominador;
+    return uno.str();
 
 }
