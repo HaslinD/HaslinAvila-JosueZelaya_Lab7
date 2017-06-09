@@ -8,22 +8,37 @@ Racional :: Racional(int denominador, int numerador) {
 }
 
 Racional :: Racional() {
-	
+
 }
 
-int Racional :: getDenominador(){
+int Racional :: getDenominador() {
 	return denominador;
 }
 
-void Racional :: setDenominador(int ndenominador){
+void Racional :: setDenominador(int ndenominador) {
 	denominador = ndenominador;
 }
 
-int Racional :: getNumerador(){
+int Racional :: getNumerador() {
 	return numerador;
 }
 
-void Racional :: setNumerador(int nnumerador){
+void Racional :: setNumerador(int nnumerador) {
 	numerador = nnumerador;
 }
 
+int Racional :: suma() {
+	
+}
+
+int Racional :: resta() { 
+	
+}
+
+int Racional :: multiplicacion() {
+	
+}
+
+int Racional :: division() {
+	
+}
