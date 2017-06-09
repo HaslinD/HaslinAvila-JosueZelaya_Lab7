@@ -20,7 +20,7 @@ class Racional : public Real{
 		void setNumerador(double);
 		string tostring();
 
-		string operator+(Racional& real){
+		string operator+(Real& real){
 			Racional* p=static_cast<Racional*> (&real);
 			string total;
 			double num, den;
@@ -42,7 +42,7 @@ class Racional : public Real{
 			}
 		}
 
-		string operator-(Racional& real){
+		string operator-(Real& real){
 			Racional* p=static_cast<Racional*> (&real);
 			string total;
 			double num, den;
@@ -65,16 +65,31 @@ class Racional : public Real{
 
 		}
 
-		string operator*(Racional& real){
+		string operator*(Real& real){
 			Racional* p=static_cast<Racional*> (&real);
 			string total;
 			double num, den;
 			num=(numerador*p->getNumerador());
 			den=(denominador*p->getDenominador());
+			total+=num;
+			total+= " / ";
+			total+= den;
+
+			return total;
 		}
 
 		string operator/(Real& real){
+			Racional* p=static_cast<Racional*> (&real);
+			string total;
+			double num, den;
+			num=(numerador*p->getDenominador());
+			den=(denominador*p->getNumerador());
 
+			total+=num;
+			total+= " / ";
+			total+= den;
+
+			return total;
 		}
 
 };
