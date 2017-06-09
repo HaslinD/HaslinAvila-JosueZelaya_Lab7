@@ -60,6 +60,8 @@ class Racional : public Real{
 		}
 
 		string operator-(Real& real){
+
+			//Resta de FRacciones
 			Racional* p=static_cast<Racional*> (&real);
 			string total;
 			double num, den;
@@ -79,6 +81,19 @@ class Racional : public Real{
 
 				return total;
 			}
+
+			//Radical
+			Radical* radi=static_cast<Radical*> (&real);
+			num=numerador;
+			total+=num;
+			total+= " - ";
+			num2=(denominador*radi->getCoeficiente());
+			total+= num2;
+			total+=radi->getRadicando();
+			total+= " ^ ";
+			total+= radi->getIndice();
+			total+= " / ";
+			total+= denominador;
 
 		}
 
