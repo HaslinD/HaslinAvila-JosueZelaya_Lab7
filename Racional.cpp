@@ -26,3 +26,10 @@ double Racional :: getNumerador() {
 void Racional :: setNumerador(double nnumerador) {
 	numerador = nnumerador;
 }
+
+void Racional::tostring(string& out, double value){
+    ostringstream ss;
+    ss << value;
+    out = ss.str();
+
+}

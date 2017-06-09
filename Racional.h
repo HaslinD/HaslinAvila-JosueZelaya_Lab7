@@ -17,10 +17,14 @@ class Racional : public Real{
 		void setDenominador(double);
 		double getNumerador();
 		void setNumerador(double);
+		void tostring(string&, double);
 
 		int operator+(Real& real){
 			Racional* p=static_cast<Racional*> (&real);
-			if (numerador== p->getNumerador()){
+			double total;
+			if (denominador== p->getDenominador()){
+				total=numerador+p->getNumerador();
+				tostring();
 
 			}
 		}
