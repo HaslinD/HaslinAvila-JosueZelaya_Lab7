@@ -1,4 +1,5 @@
-#include "Real.h"
+#include "Radical.h"
+#include "Racional.h"
 #include <iostream>
 #include <string>
 #include <vector>
@@ -7,7 +8,7 @@ using namespace std;
 
 #ifndef RADICAL_H
 #define RADICAL_H
-class Radical : public Real{
+class Radical : public Radical{
 	protected:
 		double coeficiente;
 		double indice;
@@ -25,11 +26,43 @@ class Radical : public Real{
 		void setRadicando(double);
 
 		string operator+(Real& real){
-			Radical* rad = static_cast<Radical*>(&real);
+			Racional* p=static_cast<Racional*> (&real);
+			string total;
+			double suma, coeficiente, indice, radicando;
+			if (radicando == rad->getRadicando() && indice == rad->getIndice())
+			{
+				suma = coeficiente + rad->getCoeficiente();
+				total += suma;
+				total += "( "+radicando
+				total += " ^ "+"1"+"/"+indice;
+				total += " )";
 
+			} else if (radicando != rad->getRadicando() || indice != rad->getIndice()) {
+				total += coeficiente;
+				total += "( "+radicando;
+				total += " ^ "+"1"+"/"+indice;
+				total += " )";
+			}
+			
+			return total;
 		}
-		string operator-(Real&){
-
+		string operator-(Real& real){
+			Racional* p=static_cast<Racional*> (&real);
+			double resta = 0;
+			if (radicando == rad->getRadicando() && indice == rad->getIndice())
+			{
+				resta = coeficiente - rad->getCoeficiente();
+				total += suma;
+				total += "( "+radicando
+				total += " ^ "+"1"+"/"+indice;
+				total += " )";
+			} else if (radicando != rad->getRadicando() || indice != rad->getIndice()) {
+				total += suma;
+				total += "( "+radicando
+				total += " ^ "+"1"+"/"+indice;
+				total += " )";
+			}
+			return total;
 		}
 		string operator*(Real&){
 
