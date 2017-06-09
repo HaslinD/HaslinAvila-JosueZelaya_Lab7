@@ -18,12 +18,7 @@ class Racional {
 		int getNumerador();
 		void setNumerador(int);
 
-<<<<<<< HEAD
-		virtual int suma();
-		virtual int resta();
-		virtual int multiplicacion();
-		virtual int divsion();
-=======
+
 		int operator+(Real*){
 
 		}
@@ -37,7 +32,6 @@ class Racional {
 			
 		}
 
->>>>>>> d844cc17a5519afde612d3e8843add9421163760
 };
 
 #endif
