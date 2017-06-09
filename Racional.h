@@ -56,6 +56,8 @@ class Racional : public Real{
 			total+= " / ";
 			total+= denominador;
 
+			//return total;
+
 
 		}
 
@@ -83,6 +85,7 @@ class Racional : public Real{
 			}
 
 			//Radical
+
 			Radical* radi=static_cast<Radical*> (&real);
 			num=numerador;
 			total+=num;
@@ -95,9 +98,12 @@ class Racional : public Real{
 			total+= " / ";
 			total+= denominador;
 
+			return total;
+
 		}
 
 		string operator*(Real& real){
+			//multiplicacion racionales
 			Racional* p=static_cast<Racional*> (&real);
 			string total;
 			double num, den;
@@ -108,6 +114,10 @@ class Racional : public Real{
 			total+= den;
 
 			return total;
+
+			//radicales
+			//Radical* radi=static_cast<Radical*> (&real);
+
 		}
 
 		string operator/(Real& real){
