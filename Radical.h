@@ -24,16 +24,16 @@ class Radical{
 		int getRadicando();
 		void setRadicando(int);
 
-		virtual int operator+(Real*){
+		virtual int operator+(Real&){
 
 		}
-		virtual int operator-(Real*){
+		virtual int operator-(Real&){
 
 		}
-		virtual int operator*(Real*){
+		virtual int operator*(Real&){
 
 		}
-		virtual int operator/(Real*){
+		virtual int operator/(Real&){
 
 		}
 
