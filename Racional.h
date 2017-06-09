@@ -18,13 +18,11 @@ class Racional {
 		int getNumerador();
 		void setNumerador(int);
 
-<<<<<<< HEAD
 		int operator+(Real&){
 
-=======
+		}
 
 		int operator+(Real*){
->>>>>>> e5c98876a12c16865af5615c05ec039c7ee8c8f0
 
 		}
 		int operator-(Real&){
