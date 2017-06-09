@@ -26,7 +26,7 @@ class Radical : public Radical{
 		void setRadicando(double);
 
 		string operator+(Real& real){
-			Racional* p=static_cast<Racional*> (&real);
+			Radical* p=static_cast<Radical*> (&real);
 			string total;
 			double suma, coeficiente, indice, radicando;
 			if (radicando == rad->getRadicando() && indice == rad->getIndice())
@@ -47,8 +47,9 @@ class Radical : public Radical{
 			return total;
 		}
 		string operator-(Real& real){
-			Racional* p=static_cast<Racional*> (&real);
+			Radical* p=static_cast<Radical*> (&real);
 			double resta = 0;
+			string total;
 			if (radicando == rad->getRadicando() && indice == rad->getIndice())
 			{
 				resta = coeficiente - rad->getCoeficiente();
@@ -64,8 +65,23 @@ class Radical : public Radical{
 			}
 			return total;
 		}
-		string operator*(Real&){
+		string operator*(Real& real){
+			Radical* p = static_cast<Radical*> (&real);
+			double multiR, multiI, multiC;
+			multiR = radicando * p->getRadicando();
+			if (indice == rad->getIndice())
+			{
+				multiI = indice;
+			} else if (indice != rad->getIndice()) {
+				multiI = indice * p->getIndice();
+			}
+			multiC = coeficiente * p->getCoeficiente();
 
+			total += suma;
+			total += "( "+radicando
+			total += " ^ "+"1"+"/"+indice;
+			total += " )";
+			
 		}
 		string operator/(Real&){
 
