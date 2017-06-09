@@ -5,7 +5,7 @@
 
 using namespace std;
 
-class Racional {
+class Racional : public Real{
 	private:
 		double denominador;
 		double numerador;
@@ -14,26 +14,26 @@ class Racional {
 		Racional();
 		Racional(double, double);
 		double getDenominador();
-		void setDenominador(int);
+		void setDenominador(double);
 		double getNumerador();
-		void setNumerador(int);
+		void setNumerador(double);
 
 		int operator+(Real& real){
-			Racional* p=dynamic_cast<Real*> (real);
+			Racional* p=static_cast<Racional*> (&real);
 			if (numerador== p->getNumerador()){
 
 			}
 		}
 
-		int operator-(Real&){
+		int operator-(Real& real){
 
 		}
 
-		int operator*(Real&){
+		int operator*(Real& real){
 
 		}
 
-		int operator/(Real&){
+		int operator/(Real& real){
 
 		}
 
