@@ -21,6 +21,8 @@ class Racional : public Real{
 		string tostring();
 
 		string operator+(Real& real){
+
+			//Racional
 			Racional* p=static_cast<Racional*> (&real);
 			string total;
 			double num, den;
@@ -40,6 +42,11 @@ class Racional : public Real{
 
 				return total;
 			}
+
+			//Radical
+			Radical* p=static_cast<Radical*> (&real);
+			
+
 		}
 
 		string operator-(Real& real){
@@ -91,6 +98,8 @@ class Racional : public Real{
 
 			return total;
 		}
+
+
 
 };
 
