@@ -25,7 +25,7 @@ class Racional : public Real{
 			//Racional
 			Racional* p=static_cast<Racional*> (&real);
 			string total;
-			double num, den;
+			double num, den, num2,num3;
 			if (denominador== p->getDenominador()){
 				num=numerador+p->getNumerador();
 				total+=num;
@@ -44,8 +44,18 @@ class Racional : public Real{
 			}
 
 			//Radical
-			Radical* p=static_cast<Radical*> (&real);
-			
+			Radical* radi=static_cast<Radical*> (&real);
+			num=numerador;
+			total+=num;
+			total+= " + ";
+			num2=(denominador*radi->getCoeficiente());
+			total+= num2;
+			total+=radi->getRadicando();
+			total+= " ^ ";
+			total+= radi->getIndice();
+			total+= " / ";
+			total+= denominador;
+
 
 		}
 
