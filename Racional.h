@@ -18,13 +18,13 @@ class Racional {
 		int getNumerador();
 		void setNumerador(int);
 
-		int operator+(Real&){
+		int operator+(Real& real){
+			Racional* p=dynamic_cast<Real*> (real);
+			if (numerador== p->getNumerador()){
 
+			}
 		}
 
-		int operator+(Real*){
-
-		}
 		int operator-(Real&){
 
 		}
