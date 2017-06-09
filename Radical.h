@@ -24,16 +24,17 @@ class Radical : public Real{
 		double getRadicando();
 		void setRadicando(double);
 
-		int operator+(Real& real){
-			Radical* rad = dynamic_cast<Real*>(real);
+		string operator+(Real& real){
+			Radical* rad = dynamic_cast<Radical*>(real);
+			
 		}
-		int operator-(Real&){
+		string operator-(Real&){
 
 		}
-		int operator*(Real&){
+		string operator*(Real&){
 
 		}
-		int operator/(Real&){
+		string operator/(Real&){
 
 		}
 
