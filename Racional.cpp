@@ -2,7 +2,7 @@
 
 using namespace std;
 
-Racional :: Racional(int denominador, int numerador) {
+Racional :: Racional(double denominador, double numerador) {
 	this -> denominador = denominador;
 	this -> numerador = numerador;
 }
@@ -11,18 +11,18 @@ Racional :: Racional() {
 
 }
 
-int Racional :: getDenominador() {
+double Racional :: getDenominador() {
 	return denominador;
 }
 
-void Racional :: setDenominador(int ndenominador) {
+void Racional :: setDenominador(double ndenominador) {
 	denominador = ndenominador;
 }
 
-int Racional :: getNumerador() {
+double Racional :: getNumerador() {
 	return numerador;
 }
 
-void Racional :: setNumerador(int nnumerador) {
+void Racional :: setNumerador(double nnumerador) {
 	numerador = nnumerador;
 }

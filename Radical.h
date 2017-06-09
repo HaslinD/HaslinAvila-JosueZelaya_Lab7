@@ -9,20 +9,20 @@ using namespace std;
 #define RADICAL_H
 class Radical{
 	protected:
-		int coeficiente;
-		int indice;
-		int radicando;
+		double coeficiente;
+		double indice;
+		double radicando;
 	public:
-		Radical(int,int,int);
+		Radical(double,double,double);
 		Radical();
-		int getCoeficiente();
-		void setCoeficiente(int);
+		double getCoeficiente();
+		void setCoeficiente(double);
 
-		int getIndice();
-		void setIndice(int);
+		double getIndice();
+		void setIndice(double);
 
-		int getRadicando();
-		void setRadicando(int);
+		double getRadicando();
+		void setRadicando(double);
 
 		virtual int operator+(Real&){
 
