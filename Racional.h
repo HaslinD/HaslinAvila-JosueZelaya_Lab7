@@ -21,13 +21,13 @@ class Racional : public Real{
 		void setNumerador(double);
 		string tostring();
 
-		string operator+(Real&);
+		string operator+(Real&, double, double);
 
-		string operator-(Real&);
+		string operator-(Real&, double, double);
 
-		string operator*(Real&);
+		string operator*(Real&, double, double);
 
-		string operator/(Real&);
+		string operator/(Real&, double, double);
 
 
 };

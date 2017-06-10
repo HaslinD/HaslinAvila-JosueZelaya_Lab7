@@ -39,8 +39,6 @@ string Racional::tostring(){
 string operator+(Real& real){
 	double denominador;
 	double numerador;
-	this -> denominador = denominador;
-	this -> numerador = numerador;
 	//Racional
 
 	Racional* p=static_cast<Racional*> (&real);
@@ -84,18 +82,16 @@ string operator+(Real& real){
 string operator-(Real& real){
 	double denominador;
 	double numerador;
-	this -> denominador = denominador;
-	this -> numerador = numerador;
 
 	//Resta de FRacciones
 	Racional* p=static_cast<Racional*> (&real);
 	string total;
 	double num, den, num2;
-	if (denominador== p->getDenominador()){
-		num=numerador-p->getNumerador();
+	if (this -> denominador== p->getDenominador()){
+		num= this -> numerador-p->getNumerador();
 		total+=num;
 		total+=" / ";
-		total+=denominador;
+		total+=this -> denominador;
 
 		return total;
 	}else{
@@ -129,8 +125,6 @@ string operator-(Real& real){
 string operator*(Real& real){
 	double denominador;
 	double numerador;
-	this -> denominador = denominador;
-	this -> numerador = numerador;
 
 	//multiplicacion racionales
 	Racional* p=static_cast<Racional*> (&real);
@@ -152,8 +146,6 @@ string operator*(Real& real){
 string operator/(Real& real){
 	double denominador;
 	double numerador;
-	this -> denominador = denominador;
-	this -> numerador = numerador;
 
 	Racional* p=static_cast<Racional*> (&real);
 	string total;
