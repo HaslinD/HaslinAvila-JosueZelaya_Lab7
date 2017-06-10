@@ -4,38 +4,84 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <sstream>
 
 using namespace std;
 
 int menu();
 
 int main(){
-	int* Banco;
-	for (int i = 0; i < 9; ++i)
-	{
-		Banco = new int[9];
-	}
-	for (int i = 0; i < 9; ++i)
-	{
-		Banco[i] = i;
-	}
+	vector <Real> banco;
 	bool salir = false;
+	double numerador,denominador,coeficiente,indice, radicando, num;
+	int pos1,pos2;
+	string total;
 	while (!salir){
         switch(menu()){
            	case 1:{
+							cout<<"Que desea agregar?: " <<endl
+							<<"[1]. Racionales"<<endl
+							<<"[2]. Radicales"<<endl;
+							int opcion;
+							cin>>opcion;
+							switch (opcion) {
+								case 1:{
+									cout<<"Ingrese el numerador: "<<endl;
+									cin>>numerador;
+									cout<<"Ingrese el denominador: "<<endl;
+									cin>>denominador;
+									Racional ra(denominador,numerador);
+									banco.push_back(ra);
+									break;
+								}
+								case 2:{
+									cout<<"Ingrese el coeficiente: "<<endl;
+									cin>>coeficiente;
+									cout<<"Ingrese el indice: "<<endl;
+									cin>>indice;
+									cout<<"Ingrese el radicando: "<<endl;
+									cin>>radicando;
+									Radical radical(coeficiente, indice,radicando);
+									banco.push_back(radical);
+								}
+							}
+						}
+	       		case 2:{
+							int op;
+							for (int i = 0; i < banco.size; i++) {
+								cout<<i <<". "<<banco[i];
+							}
+							cout<<"Ingrese la posicion de la primera clase que desea usar: "<<endl;
+							cin>>pos1;
+							cout<<"[1]. Escoger otra clase: "<<endl
+							cout<<"[2]. Ingresar un numero: "<<endl;
+							cout<<"Ingrese opcion: "<<endl;
+							cin>>op;
+							switch (op){
+								case 1:{
+									for (int i = 0; i < banco.size; i++) {
+										cout<<i <<". "<<banco[i];
+									}
+									cout<<"Ingrese la posicion de la segunda clase que desea usar: "<<endl;
+									cin>>pos2;
+									break;
+								}
+								case 2:{
+									cout<<"Ingrese un numero: "<<endl;
+									cin>>num;
+									total=*banco[pos1]+num;
+									break;
+								}
+							}
 
-
-
-               	break;}
-
-	       	case 2:{
-
-	           	break;}
-
-	       	case 3:
-	           	salir = true;
 	           	break;
-	    }
+						}
+
+	       		case 3:{
+	          	salir = true;
+	           	break;
+						}
+	    	}
 	}
 	return 0;
 }
@@ -45,8 +91,8 @@ int menu(){
     bool valido = true;
     do{
         cout << "-----MENU------" << endl
-			<< "1.- Crear Numeros" << endl
-			<< "2.- Usar" << endl
+			<< "1.- Agregar Numeros al Banco" << endl
+			<< "2.- Eligir" << endl
 			<< "3.- Salir" << endl;
 
         cout << " Ingrese una opción: ";
@@ -61,3 +107,12 @@ int menu(){
     }while(!valido);
     return opcion;
 }
+
+/*string Binario::tostring(){
+  stringstream uno;
+	for (int i = 0; i < banco.size(); i++) {
+		uno<<"[" << banco[i]<<"]";
+	}
+
+  return uno.str();
+}*/

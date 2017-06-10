@@ -7,7 +7,7 @@ using namespace std;
 #ifndef RADICAL_H
 #define RADICAL_H
 class Radical : public Real{
-	protected:
+	private:
 		double coeficiente;
 		double indice;
 		double radicando;
