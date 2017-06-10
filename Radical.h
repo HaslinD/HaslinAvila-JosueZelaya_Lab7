@@ -1,11 +1,12 @@
+#pragma once
+
 #include "Real.h"
+#include "Racional.h"
 #include <string>
 #include <vector>
 
 using namespace std;
 
-#ifndef RADICAL_H
-#define RADICAL_H
 class Radical : public Real{
 	protected:
 		double coeficiente;
@@ -137,4 +138,3 @@ class Radical : public Real{
 		}
 
 };
-#endif

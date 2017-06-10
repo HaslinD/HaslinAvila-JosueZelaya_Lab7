@@ -1,6 +1,4 @@
-#include <string>
-#ifndef REAL_H
-#define REAL_H
+#pragma once
 
 #include <string>
 
@@ -15,6 +13,3 @@ class Real{
 		virtual string operator/(Real&) = 0;
 
 };
-
-
-#endif
