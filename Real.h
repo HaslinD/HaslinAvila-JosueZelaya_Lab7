@@ -1,6 +1,4 @@
-#include <string>
-#ifndef REAL_H
-#define REAL_H
+#pragma once
 
 #include <string>
 
@@ -17,6 +15,3 @@ class Real{
 		virtual void setTipo(string);
 
 };
-
-
-#endif
