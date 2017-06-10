@@ -8,7 +8,7 @@
 using namespace std;
 
 class Radical : public Real{
-	protected:
+	private:
 		double coeficiente;
 		double indice;
 		double radicando;
