@@ -32,6 +32,6 @@ void Racional :: setNumerador(double nnumerador) {
 string Racional::tostring(){
     stringstream ss;
     ss << numerador<< " / "<<denominador;
-    return uno.str();
+    return ss.str();
 
 }

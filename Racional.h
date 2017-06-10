@@ -1,4 +1,5 @@
 #include "Real.h"
+#include "Radical.h"
 #include <string>
 
 #ifndef RACIONAL_H
@@ -66,7 +67,7 @@ class Racional : public Real{
 			//Resta de FRacciones
 			Racional* p=static_cast<Racional*> (&real);
 			string total;
-			double num, den;
+			double num, den, num2;
 			if (denominador== p->getDenominador()){
 				num=numerador-p->getNumerador();
 				total+=num;

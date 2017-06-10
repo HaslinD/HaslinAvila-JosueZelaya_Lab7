@@ -1,4 +1,3 @@
-
 #include "Real.h"
 #include "Radical.h"
 #include "Racional.h"
