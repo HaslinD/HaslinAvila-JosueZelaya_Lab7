@@ -28,3 +28,12 @@ void Radical::setRadicando(double radicando){
 double Radical::getRadicando(){
    return radicando;
 }
+
+string Radical::getTipo(){
+	return Tipo;
+}
+
+void Radical::setTipo(string tipo){
+	tipo="Radical";
+	Tipo=tipo;
+}

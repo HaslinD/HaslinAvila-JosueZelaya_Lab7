@@ -12,11 +12,14 @@ class Radical : public Real{
 		double coeficiente;
 		double indice;
 		double radicando;
+		string Tipo;
 	public:
 		Radical(double,double,double);
 		Radical();
 		double getCoeficiente();
 		void setCoeficiente(double);
+		string getTipo();
+		void setTipo(string);
 
 		double getIndice();
 		void setIndice(double);
@@ -109,7 +112,7 @@ class Radical : public Real{
 			total += multiI;
 			total += " )";
 			return total;
-			
+
 		}
 		string operator/(Real& real){
 			Radical* p = static_cast<Radical*> (&real);
