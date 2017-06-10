@@ -13,6 +13,8 @@ class Real{
 		virtual string operator-(Real&) = 0;
 		virtual string operator*(Real&) = 0;
 		virtual string operator/(Real&) = 0;
+		virtual string getTipo();
+		virtual void setTipo(string);
 
 };
 

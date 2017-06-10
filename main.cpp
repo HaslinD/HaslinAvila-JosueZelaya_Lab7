@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 #include <sstream>
+#include <typeinfo>
 
 using namespace std;
 
@@ -48,6 +49,7 @@ int main(){
 						}
 	       		case 2:{
 							int op;
+							int opcion;
 							for (int i = 0; i < banco.size; i++) {
 								cout<<i <<". "<<banco[i];
 							}
@@ -64,6 +66,31 @@ int main(){
 									}
 									cout<<"Ingrese la posicion de la segunda clase que desea usar: "<<endl;
 									cin>>pos2;
+									cout<<"Que desea realizar?: "<<endl
+									<<"[1]. Sumar"<<endl
+									<<"[2]. Restar"<<endl
+									<<"[3]. Multiplicacion"<<endl
+									<<"[4]. Division"<<endl;
+									cin>>opcion;
+									switch(opcion){
+										case 1:{
+											if (banco[pos2].getTipo()=="Radical"){
+												total=(*banco[pos1]+banco[pos2]);
+											}else if (banco[pos2].getTipo()=="Racional"){
+												total=(*banco[pos2]+banco[pos1]);
+											}
+											break;
+										}
+										case 2:{
+											break;
+										}
+										case 3:{
+											break;
+										}
+										case 4:{
+											break;
+										}
+									}
 									break;
 								}
 								case 2:{

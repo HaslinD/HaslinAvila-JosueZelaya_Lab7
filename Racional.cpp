@@ -13,6 +13,15 @@ Racional :: Racional() {
 
 }
 
+string Racional::getTipo(){
+	return Tipo;
+}
+
+void Racional::setTipo(string tipo){
+	tipo="Racional";
+	Tipo=tipo;
+}
+
 double Racional :: getDenominador() {
 	return denominador;
 }

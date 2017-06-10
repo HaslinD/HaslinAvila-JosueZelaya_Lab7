@@ -11,6 +11,7 @@ class Racional : public Real{
 	private:
 		double denominador;
 		double numerador;
+		string Tipo;
 
 	public:
 		Racional();
@@ -20,6 +21,8 @@ class Racional : public Real{
 		double getNumerador();
 		void setNumerador(double);
 		string tostring();
+		string getTipo();
+		void setTipo(string);
 
 		string operator+(Real& real){
 
